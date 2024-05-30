@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    include Common/Bootstrap.pug
+    title Movie List
+
+  body
+    .card.w-50.m-5.p-5
+      h1.mb-3 Login Form
+      .card-body
+        form(method="POST")
+          img.mb-5(src="Image/feedback.png", alt="",width="135px")
+          .form-floating.mb-4
+            input#emailInput.form-control(type="email", name="email", placeholder="name@example.com")
+            label(for="emailInput") Email address
+
+          .form-floating.mb-4
+            input#passwordInput.form-control(type="password", name="password" placeholder="Password")
+            label(for="passwordInput") Password
+
+          p #{error}
+          button#loginButton.btn.btn-primary Login
+          button#signupButton.btn.btn-danger.m-3 Signup
+
